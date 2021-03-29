@@ -1,20 +1,20 @@
 public class Student {
-    private String id;
+    private String sid;
     private String name;
     private String DOB; // Date of Birth
 
     public Student(String id, String name, String DOB) {
-        this.id = id;
+        this.sid = id;
         this.name = name;
         this.DOB = DOB;
     }
 
     public String getId() {
-        return id;
+        return sid;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.sid = id;
     }
 
     public String getName() {
