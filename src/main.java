@@ -8,5 +8,8 @@ public class main {
         Course c1 = new Course("COSC2440", "Further Programming", 12);
         System.out.println(c1.getCid());
         System.out.println(c1.getNumberOfCredits());
+        StudentEnrolment SE = new StudentEnrolment();
+        SE.getStudentList().add(s1);
+        System.out.println(SE.getStudentList().get(0).getId());
     }
 }
