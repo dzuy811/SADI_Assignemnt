@@ -1,7 +1,6 @@
-public interface StudentEnrolmentManager {
-    public boolean add();
-    public boolean update();
-    public boolean detele();
-    public boolean getOne();
-    public boolean getAll();
+import java.util.ArrayList;
+
+public class StudentEnrolmentManager {
+    private ArrayList<StudentEnrolment> studentEnrolmentList;
+
 }

@@ -1,21 +1,28 @@
-import java.util.ArrayList;
-
-public class StudentEnrolment implements StudentEnrolmentManager {
-    private ArrayList<Student> studentList;
-    private ArrayList<Course> courseList;
+public class StudentEnrolment {
+    private Student student;
+    private Course course;
     private String semester;
 
-    public StudentEnrolment() {
-        studentList = new ArrayList<Student>();
-        courseList = new ArrayList<Course>();
+    public StudentEnrolment(Student student, Course course, String semester) {
+        this.student = student;
+        this.course = course;
+        this.semester = semester;
     }
 
-    public ArrayList<Student> getStudentList() {
-        return studentList;
+    public Student getStudent() {
+        return student;
     }
 
-    public ArrayList<Course> getCourseList() {
-        return courseList;
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
     public String getSemester() {
@@ -25,20 +32,4 @@ public class StudentEnrolment implements StudentEnrolmentManager {
     public void setSemester(String semester) {
         this.semester = semester;
     }
-
-    public boolean add() {
-        return false;
-    };
-    public boolean update() {
-        return false;
-    };
-    public boolean detele() {
-        return false;
-    };
-    public boolean getOne() {
-        return false;
-    };
-    public boolean getAll() {
-        return false;
-    };
 }
