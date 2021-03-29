@@ -32,4 +32,13 @@ public class Course {
     public void setNumberOfCredits(int numberOfCredits) {
         this.numberOfCredits = numberOfCredits;
     }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "cid='" + cid + '\'' +
+                ", name='" + name + '\'' +
+                ", numberOfCredits=" + numberOfCredits +
+                '}';
+    }
 }

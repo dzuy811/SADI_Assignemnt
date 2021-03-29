@@ -9,11 +9,11 @@ public class Student {
         this.DOB = DOB;
     }
 
-    public String getId() {
+    public String getSid() {
         return sid;
     }
 
-    public void setId(String id) {
+    public void setSid(String id) {
         this.sid = id;
     }
 
@@ -31,5 +31,14 @@ public class Student {
 
     public void setDOB(String DOB) {
         this.DOB = DOB;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "sid='" + sid + '\'' +
+                ", name='" + name + '\'' +
+                ", DOB='" + DOB + '\'' +
+                '}';
     }
 }

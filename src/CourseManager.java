@@ -1,9 +1,13 @@
 import java.util.ArrayList;
 
 public class CourseManager {
-    private ArrayList<Course> courseList;
+    private final ArrayList<Course> courseList;
 
-    public CourseManager(ArrayList<Course> courseList) {
-        this.courseList = courseList;
+    public CourseManager() {
+        this.courseList = new ArrayList<Course>();
+    }
+
+    public ArrayList<Course> getCourseList() {
+        return courseList;
     }
 }
