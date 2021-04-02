@@ -1,6 +1,14 @@
+import java.util.Scanner;
+
 public class main {
 
     public static void main(String[] args) {
+        // Populate variable
+        String sid;
+        String cid;
+        String semester;
+        Scanner sc = new Scanner(System.in);
+
         // Populate students
         Student s1 = new Student("s3818381", "Vo Tran Truong Duy", "08/11/2001");
         Student s2 = new Student("s3804690", "Nguyen Ngoc Dang Hung", "20/08/2000");
@@ -29,11 +37,46 @@ public class main {
         cm.getCourseList().add(c2);
         cm.getCourseList().add(c3);
 
-        StudentEnrolment se = new StudentEnrolment(s1, c1, "2021A");
-
         StudentEnrolmentManager sem = new StudentEnrolmentManager();
+
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s1, c1, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s2, c1, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s3, c1, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s4, c2, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s5, c2, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s5, c2, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s1, c3, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s2, c3, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s3, c3, "2021A"));
+        sem.getStudentEnrolmentList().add(new StudentEnrolment(s4, c3, "2021A"));
+
+        // Add enrolment
+
 //        System.out.println(sem.add(sm, cm) ? "Successfully" : "Failed");
-        System.out.println(sem.update(sm, cm) ? "Successfully" : "Failed");
-        System.out.println(sem.getStudentEnrolmentList().toString());
+//        System.out.println(sem.update(sid, semester, sm, cm) ? "Successfully" : "Failed");
+//        System.out.println(sem.getStudentEnrolmentList().toString());
+
+        System.out.print("Get all: \n" +
+                "1. Courses by student\n" +
+                "2. Students by course\n" +
+                "3. Semester\n" +
+                "Your choice: ");
+        String option = sc.next();
+//        if(option.equals("1")) {
+//            System.out.print("Type the student's id: ");
+//            sid = sc.next();
+//            sem.getOne(option, sid);
+//        }
+//        else if(option.equals("2")) {
+//            System.out.print("Type the course's id: ");
+//            cid = sc.next();
+//            sem.getOne(option, cid);
+//        }
+//        else if(option.equals("3")) {
+//            sem.getOne(option, "");
+//        }
+//        else
+//            System.out.print("Invalid input. Type it again!\n");
+        System.out.println(sem.validateSemesterInput());
     }
 }
