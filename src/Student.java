@@ -1,9 +1,11 @@
+import java.util.Date;
+
 public class Student {
     private String sid;
     private String name;
-    private String DOB; // Date of Birth
+    private Date DOB; // Date of Birth
 
-    public Student(String id, String name, String DOB) {
+    public Student(String id, String name, Date DOB) {
         this.sid = id;
         this.name = name;
         this.DOB = DOB;
@@ -25,11 +27,11 @@ public class Student {
         this.name = name;
     }
 
-    public String getDOB() {
+    public Date getDOB() {
         return DOB;
     }
 
-    public void setDOB(String DOB) {
+    public void setDOB(Date DOB) {
         this.DOB = DOB;
     }
 
@@ -38,7 +40,7 @@ public class Student {
         return "Student{" +
                 "sid='" + sid + '\'' +
                 ", name='" + name + '\'' +
-                ", DOB='" + DOB + '\'' +
+                ", DOB=" + DOB +
                 '}';
     }
 }
