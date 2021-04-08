@@ -1,12 +1,16 @@
+package StudentEnrolmentSystem;
+
 public class Course {
     private String cid;
     private String name;
     private int numberOfCredits;
+    private String semester;
 
-    public Course(String cid, String name, int numberOfCredits) {
+    public Course(String cid, String name, int numberOfCredits, String semester) {
         this.cid = cid;
         this.name = name;
         this.numberOfCredits = numberOfCredits;
+        this.semester = semester;
     }
 
     public String getCid() {
@@ -33,12 +37,21 @@ public class Course {
         this.numberOfCredits = numberOfCredits;
     }
 
+    public String getSemester() {
+        return semester;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
+    }
+
     @Override
     public String toString() {
         return "Course{" +
                 "cid='" + cid + '\'' +
                 ", name='" + name + '\'' +
                 ", numberOfCredits=" + numberOfCredits +
+                ", semester='" + semester + '\'' +
                 '}';
     }
 }

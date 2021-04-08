@@ -1,3 +1,5 @@
+package StudentEnrolmentSystem;
+
 public class StudentEnrolment {
     private Student student;
     private Course course;
@@ -35,7 +37,7 @@ public class StudentEnrolment {
 
     @Override
     public String toString() {
-        return "StudentEnrolment{" +
+        return "StudentEnrolmentSystem.StudentEnrolment{" +
                 "student=" + student +
                 ", course=" + course +
                 ", semester='" + semester + '\'' +

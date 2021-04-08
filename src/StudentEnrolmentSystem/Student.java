@@ -1,3 +1,5 @@
+package StudentEnrolmentSystem;
+
 import java.util.Date;
 
 public class Student {
@@ -37,7 +39,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "StudentEnrolmentSystem.Student{" +
                 "sid='" + sid + '\'' +
                 ", name='" + name + '\'' +
                 ", DOB=" + DOB +
