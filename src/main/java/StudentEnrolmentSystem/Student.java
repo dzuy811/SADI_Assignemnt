@@ -36,13 +36,4 @@ public class Student {
     public void setDOB(Date DOB) {
         this.DOB = DOB;
     }
-
-    @Override
-    public String toString() {
-        return "StudentEnrolmentSystem.Student{" +
-                "sid='" + sid + '\'' +
-                ", name='" + name + '\'' +
-                ", DOB=" + DOB +
-                '}';
-    }
 }

@@ -20,8 +20,13 @@ public class CourseManager {
     public void readCourseFile(String fileName) throws FileNotFoundException {
         Scanner fileRead = new Scanner(new File(fileName));
         while (fileRead.hasNext()) {
+            // String to store the line
             String[] list = fileRead.nextLine().split(",", 4);
+
+            // New course object
             Course course = new Course(list[0], list[1], Integer.parseInt(list[2]), list[3]);
+
+            // Add this object into the array list
             this.courseList.add(course);
         }
         fileRead.close();
@@ -50,11 +55,17 @@ public class CourseManager {
                 break;
             }
             else if(fileOption.equals("2")){
-                System.out.print("Type the file name: ");
-                readCourseFile(sc.next());
+                while(true) {
+                    try {
+                        System.out.print("Type the file name: ");
+                        readCourseFile(sc.next());
+                        break;
+                    } catch(FileNotFoundException e) {
+                        System.out.println("No File Found. Type it again!\n");
+                    }
+                }
                 break;
             } else System.out.println("Invalid value. Type it again!\n");
         }
-
     }
 }

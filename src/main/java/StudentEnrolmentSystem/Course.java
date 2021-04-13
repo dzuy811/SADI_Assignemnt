@@ -44,14 +44,4 @@ public class Course {
     public void setSemester(String semester) {
         this.semester = semester;
     }
-
-    @Override
-    public String toString() {
-        return "Course{" +
-                "cid='" + cid + '\'' +
-                ", name='" + name + '\'' +
-                ", numberOfCredits=" + numberOfCredits +
-                ", semester='" + semester + '\'' +
-                '}';
-    }
 }

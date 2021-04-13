@@ -34,17 +34,4 @@ public class StudentEnrolment {
     public void setSemester(String semester) {
         this.semester = semester;
     }
-
-    @Override
-    public String toString() {
-        return "StudentEnrolmentSystem.StudentEnrolment{" +
-                "student=" + student +
-                ", course=" + course +
-                ", semester='" + semester + '\'' +
-                '}';
-    }
-
-    public void add() {
-
-    }
 }
